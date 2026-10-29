@@ -2,8 +2,6 @@
 :root {
     --pink: #f8a5c2;
     --lightpink: #f7b7d1;
-    --pinklight: #ffe4ec;
-    --white: #fff0f5;
 }
 
 body {
@@ -23,16 +21,8 @@ header {
     box-shadow: 0 8px 20px rgba(248, 165, 194, 0.3);
 }
 
-header h1 {
-    font-size: 2.8rem;
-    margin: 0;
-}
-
-header p {
-    font-size: 1.3rem;
-    margin: 10px 0 0;
-    opacity: 0.9;
-}
+header h1 { font-size: 2.8rem; margin: 0; }
+header p { font-size: 1.3rem; margin: 10px 0 0; opacity: 0.9; }
 
 /* ==================== PRESENTACIÓN ==================== */
 #presentation {
@@ -58,51 +48,46 @@ header p {
 }
 
 .skills-grid div {
-    background: var(--pinklight);
+    background: #fff0f5;
     padding: 15px;
     border-radius: 15px;
     text-align: center;
     font-size: 1.1rem;
 }
 
-/* ==================== PROYECTOS (Botones + Contenido) ==================== */
+/* ==================== PROYECTOS (3 tarjetas) ==================== */
 #projects {
     max-width: 900px;
     margin: 50px auto;
 }
 
-.project-btn {
-    width: 100%;
-    padding: 18px 25px;
-    margin: 15px 0;
-    background: linear-gradient(135deg, #f8a5c2, #f7b7d1);
-    color: #2c3e50;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(248, 165, 194, 0.3);
-    transition: all 0.3s;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.project-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.4);
-}
-
-.project-content {
+.project-card {
     background: white;
     padding: 30px;
-    margin: 10px 0;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    display: none;
+    transition: transform 0.3s;
 }
 
-.project-content h3 {
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
     color: #e91e63;
     margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin: 12px 0;
+    font-size: 1.05rem;
 }
 
 .btn {
@@ -113,7 +98,7 @@ header p {
     text-decoration: none;
     border-radius: 12px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 20px;
     transition: all 0.3s;
 }
 
@@ -125,5 +110,5 @@ header p {
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     header h1 { font-size: 2.2rem; }
-    .project-btn { font-size: 1.2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
 }
