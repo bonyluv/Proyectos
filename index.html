@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Proyectos | Programación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portafolio de Proyectos</h1>
+        <p>Spanglish • Mis trabajos de programación • 2026</p>
+    </header>
+
+    <main>
+        <!-- PRESENTACIÓN -->
+        <section id="presentation">
+            <h2>Presentación</h2>
+            <p>Aquí veras mis proyectos. Only 3 of them.</p>
+            
+            <p><strong>Habilidades Técnicas</strong></p>
+            <div class="skills-grid">
+                <div>HTML • CSS • JavaScript</div>
+                <div>Python • Arduino</div>
+                <div>Flutter • Git • GitHub • VS Code</div>
+                <div>Pixel Art • Pizelart</div>
+            </div>
+        </section>
+
+        <!-- BOTONES DESPLEGABLES (3 proyectos) -->
+        <section id="projects">
+            <h2>Mis Proyectos</h2>
+            
+            <!-- Proyecto 1 -->
+            <button class="project-btn" onclick="toggleProject('lumina')">
+                🌸 Lumina Void
+            </button>
+            <div id="lumina" class="project-content hidden">
+                <h3>📱 Lumina Void</h3>
+                <p><strong>Proyecto en grupo</strong>: App de chat virtual con IA que monitorea tu estado de ánimo y es tu guía emocional. Ofrece apoyo y compañía 24/7.</p>
+                <p><strong>Características:</strong> Mascota virtual inicial, botón para iniciar chat, sistema de alimentación y baño para ganar monedas, compra de accesorios, versión premium con mejores IAs y early features.</p>
+                <p><strong>Tecnologías:</strong> Flutter, Git, VS Code, Pixel Art</p>
+                <a href="https://github.com/bonyluv/Lumina-Void" target="_blank" class="btn">Ver repositorio en GitHub</a>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <button class="project-btn" onclick="toggleProject('pepi')">
+                🌸 PEMI
+            </button>
+            <div id="pepi" class="project-content hidden">
+                <h3>📱 PEMI</h3>
+                <p><strong>Proyecto en grupo</strong>: Aplicación que se conecta por Bluetooth a un dispositivo “Meep” que detecta el pH de alimentos lácteos y muestra su estado de frescura.</p>
+                <p><strong>Tecnologías:</strong> Python (Arduino) • HTML</p>
+                <a href="https://github.com/bonyluv/Meep" target="_blank" class="btn">Ver repositorio en GitHub</a>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <button class="project-btn" onclick="toggleProject('play')">
+                🌸 Play Cupid
+            </button>
+            <div id="play" class="project-content hidden">
+                <h3>🎮 Play Cupid</h3>
+                <p><strong>Proyecto individual</strong>: Juego donde tú eres Cupido y debes hacer match con otros personajes en un escenario romántico.</p>
+                <p><strong>Tecnologías:</strong> Pixel Art • VS Code • Python</p>
+                <a href="https://github.com/bonyluv/Play-Cupid" target="_blank" class="btn">Ver repositorio en GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Portafolio • ❤️n</p>
+    </footer>
+</body>
+</html>
